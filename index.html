@@ -420,61 +420,52 @@
 
     <div class="form-box">
 
-      <form>
+      <form action="https://formspree.io/f/xbgrznyr" method="POST">
 
-        <label for="name">Full name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your full name"
-          required
-        >
+  <h2>Make an Enquiry</h2>
 
-        <label for="phone">Mobile number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Your mobile number"
-          required
-        >
+  <label for="name">Your name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    required
+  >
 
-        <label for="email">Email address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email address"
-        >
+  <label for="contact">Phone number or email</label>
+  <input
+    type="text"
+    id="contact"
+    name="contact"
+    required
+  >
 
-        <label for="finance">What are you interested in?</label>
+  <label for="consent">
+    <input
+      type="checkbox"
+      id="consent"
+      name="consent"
+      value="Yes"
+      required
+    >
+    I agree that my details can be passed to the relevant finance broker
+    regarding my enquiry.
+  </label>
 
-        <select id="finance" name="finance" required>
-          <option value="">Please select</option>
-          <option>Secured Finance</option>
-          <option>Debt Consolidation</option>
-          <option>Bridging Finance</option>
-          <option>Other Finance</option>
-        </select>
+  <!-- Referral identification -->
+  <input type="hidden" name="referrer_name" value="Gavin Boodhoo">
+  <input type="hidden" name="referrer_mobile" value="07468 054218">
+  <input type="hidden" name="referrer_email" value="gavs25@hotmail.com">
 
-        <div class="consent">
+  <input
+    type="hidden"
+    name="subject"
+    value="New Finance Referral - Gavin Boodhoo"
+  >
 
-          <label style="font-weight:400;">
-            <input type="checkbox" required>
+  <button type="submit">Submit Enquiry</button>
 
-            I understand that my details may be passed to an
-            appropriate finance broker or provider so that they
-            can contact me about my enquiry.
-          </label>
-
-        </div>
-
-        <button type="submit" class="button">
-          Submit Enquiry
-        </button>
-
-      </form>
+</form>
 
       <div class="disclosure">
 
