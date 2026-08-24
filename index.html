@@ -20,7 +20,6 @@
 
 html{
   scroll-behavior:smooth;
-  scroll-padding-top:80px;
 }
 
 body{
@@ -34,7 +33,7 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,17,31,.96);
+  background:rgba(7,17,31,.94);
   backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -172,7 +171,6 @@ nav a:hover{
   border:1px solid #35e0a1;
   transition:.25s;
   box-shadow:0 10px 30px rgba(53,224,161,.18);
-  cursor:pointer;
 }
 
 .button:hover{
@@ -394,10 +392,6 @@ section{
 
 .how .section-title p{
   color:#aebdcd;
-}
-
-.how .section-title .eyebrow{
-  color:#35e0a1;
 }
 
 .steps{
@@ -1371,11 +1365,8 @@ footer{
       <div class="footer-links">
 
         <a href="#options">Finance Options</a>
-
         <a href="#how">How It Works</a>
-
         <a href="#faq">FAQs</a>
-
         <a href="#enquiry">Enquire</a>
 
       </div>
@@ -1405,41 +1396,6 @@ footer{
   </div>
 
 </footer>
-
-<!-- BUTTON / NAVIGATION FIX -->
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-
-  link.addEventListener('click', function(event) {
-
-    const targetId = this.getAttribute('href');
-    const target = document.querySelector(targetId);
-
-    if (target) {
-
-      event.preventDefault();
-
-      const header = document.querySelector('header');
-      const headerHeight = header ? header.offsetHeight : 0;
-
-      const targetPosition =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerHeight;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-
-      history.pushState(null, '', targetId);
-    }
-
-  });
-
-});
-</script>
 
 </body>
 </html>
