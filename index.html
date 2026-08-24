@@ -1,519 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Finance Options UK | Explore Your Finance Options</title>
+<title>Finance Options UK | Explore Finance Options</title>
 
-  <meta name="description" content="Finance Options UK helps you explore a range of finance options and finance solutions avaialable
-    in the UK. Discover flexible finance options, personal finance solutions and ways to make a finance enquiry. Our aim is to make
-    exploring your options simple, straightforward and easy to understand.">
+<meta name="description" content="Explore finance options in the UK, including secured finance, debt consolidation and bridging finance. Make a simple enquiry and discuss your requirements with a suitable finance professional.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07111f">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #172033;
-      background: #f6f8fb;
-      line-height: 1.6;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e9f0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .nav {
-      max-width: 1150px;
-      margin: auto;
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:#f5f7fa;
+  color:#172033;
+  line-height:1.6;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #123b70;
-    }
+/* HEADER */
 
-    .logo span {
-      color: #18a673;
-    }
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,17,31,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
 
-    .nav a {
-      text-decoration: none;
-      color: #26344d;
-      margin-left: 25px;
-      font-weight: 600;
-    }
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #09294f, #155b8f);
-      color: white;
-      padding: 85px 20px;
-    }
+.logo{
+  color:white;
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:-.5px;
+}
 
-    .hero-inner {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 50px;
-      align-items: center;
-    }
+.logo span{
+  color:#35e0a1;
+}
 
-    .hero h1 {
-      font-size: 50px;
-      line-height: 1.1;
-      margin-bottom: 22px;
-    }
+nav{
+  display:flex;
+  gap:30px;
+}
 
-    .hero p {
-      font-size: 19px;
-      max-width: 650px;
-      color: #e6eef7;
-      margin-bottom: 30px;
-    }
+nav a{
+  color:#dce5ef;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.25s;
+}
 
-    .button {
-      display: inline-block;
-      background: #18a673;
-      color: white;
-      padding: 15px 27px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
+nav a:hover{
+  color:#35e0a1;
+}
 
-    .button:hover {
-      opacity: 0.9;
-    }
+/* HERO */
 
-    .hero-card {
-      background: white;
-      color: #172033;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-    }
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(53,224,161,.18),transparent 28%),
+    radial-gradient(circle at 10% 80%,rgba(37,126,255,.16),transparent 30%),
+    linear-gradient(135deg,#06101e,#0b2038 55%,#092d45);
+  color:white;
+  padding:100px 24px 110px;
+}
 
-    .hero-card h3 {
-      margin-bottom: 15px;
-      font-size: 23px;
-    }
+.hero:before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:50%;
+  right:-200px;
+  top:-180px;
+}
 
-    .hero-card p {
-      color: #657086;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:70px;
+  align-items:center;
+}
 
-    section {
-      padding: 70px 20px;
-    }
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid rgba(53,224,161,.3);
+  background:rgba(53,224,161,.08);
+  border-radius:30px;
+  color:#6ff0bd;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:22px;
+}
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
+.badge-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#35e0a1;
+  box-shadow:0 0 12px #35e0a1;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.hero h1{
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  max-width:760px;
+  margin-bottom:25px;
+}
 
-    .section-title h2 {
-      font-size: 35px;
-      margin-bottom: 10px;
-      color: #123b70;
-    }
+.hero h1 span{
+  color:#35e0a1;
+}
 
-    .section-title p {
-      color: #68748a;
-      max-width: 700px;
-      margin: auto;
-    }
+.hero p{
+  max-width:680px;
+  color:#c5d3e2;
+  font-size:18px;
+  line-height:1.75;
+  margin-bottom:34px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      border: 1px solid #e5e9f0;
-      box-shadow: 0 8px 25px rgba(20,40,70,0.05);
-    }
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 25px;
+  border-radius:10px;
+  background:#35e0a1;
+  color:#06131f;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid #35e0a1;
+  transition:.25s;
+  box-shadow:0 10px 30px rgba(53,224,161,.18);
+}
 
-    .card h3 {
-      color: #123b70;
-      margin-bottom: 12px;
-    }
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px rgba(53,224,161,.25);
+}
 
-    .card p {
-      color: #667085;
-    }
+.button.secondary{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.2);
+  color:white;
+  box-shadow:none;
+}
 
-    .number {
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #e8f7f1;
-      color: #12815c;
-      border-radius: 50%;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
+.button.secondary:hover{
+  background:rgba(255,255,255,.1);
+}
 
-    .enquiry {
-      background: #ffffff;
-    }
+/* HERO CARD */
 
-    .form-box {
-      max-width: 700px;
-      margin: auto;
-      background: #f8fafc;
-      padding: 35px;
-      border-radius: 16px;
-      border: 1px solid #e3e8ef;
-    }
+.hero-card{
+  background:rgba(255,255,255,.97);
+  color:#172033;
+  padding:34px;
+  border-radius:22px;
+  box-shadow:0 30px 80px rgba(0,0,0,.3);
+  border:1px solid rgba(255,255,255,.4);
+}
 
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 7px;
-      margin-top: 18px;
-    }
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px;
+}
 
-    input,
-    select {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ccd3dd;
-      border-radius: 7px;
-      font-size: 16px;
-      background: white;
-    }
+.card-icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:#e6fbf3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#0c8b61;
+  font-size:23px;
+}
 
-    .consent {
-      margin: 22px 0;
-      font-size: 13px;
-      color: #5d687a;
-    }
+.card-label{
+  font-size:12px;
+  color:#718096;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
 
-    .consent input {
-      width: auto;
-      margin-right: 8px;
-    }
+.hero-card h2{
+  font-size:26px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
 
-    .disclosure {
-      background: #eef4f9;
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 30px;
-      color: #536174;
-      font-size: 14px;
-    }
+.hero-card p{
+  color:#68748a;
+  font-size:15px;
+  line-height:1.65;
+  margin-bottom:25px;
+}
 
-    footer {
-      background: #0a203b;
-      color: #cbd5e1;
-      padding: 40px 20px;
-    }
+.quick-list{
+  list-style:none;
+  margin-bottom:25px;
+}
 
-    .footer-inner {
-      max-width: 1150px;
-      margin: auto;
-      text-align: center;
-    }
+.quick-list li{
+  padding:10px 0;
+  border-bottom:1px solid #edf0f4;
+  font-size:14px;
+  display:flex;
+  gap:10px;
+}
 
-    footer p {
-      margin: 8px 0;
-      font-size: 14px;
-    }
+.quick-list li:last-child{
+  border-bottom:none;
+}
 
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
+.tick{
+  color:#0b9b6b;
+  font-weight:900;
+}
 
-    @media (max-width: 800px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
+/* TRUST STRIP */
 
-      .hero h1 {
-        font-size: 38px;
-      }
+.trust{
+  background:white;
+  border-bottom:1px solid #e8edf2;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+.trust-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:20px 24px;
+  display:flex;
+  justify-content:center;
+  gap:45px;
+  flex-wrap:wrap;
+}
 
-      .nav a {
-        display: none;
-      }
+.trust-item{
+  color:#596579;
+  font-size:13px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 
-      section {
-        padding: 55px 18px;
-      }
-    }
-  </style>
+.trust-item span{
+  color:#15956b;
+  font-size:17px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:90px 24px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 55px;
+}
+
+.section-title .eyebrow{
+  color:#11936a;
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:10px;
+}
+
+.section-title h2{
+  color:#102b4a;
+  font-size:clamp(32px,4vw,45px);
+  line-height:1.15;
+  letter-spacing:-1px;
+  margin-bottom:15px;
+}
+
+.section-title p{
+  color:#68748a;
+  font-size:17px;
+}
+
+/* FINANCE CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.card{
+  background:white;
+  padding:34px;
+  border-radius:18px;
+  border:1px solid #e4e9ef;
+  box-shadow:0 12px 35px rgba(20,40,70,.06);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(20,40,70,.11);
+}
+
+.card-icon-large{
+  width:55px;
+  height:55px;
+  border-radius:15px;
+  background:#e8faf3;
+  color:#0d9467;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin-bottom:22px;
+}
+
+.card h3{
+  color:#102b4a;
+  font-size:21px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#69758a;
+  font-size:15px;
+  line-height:1.7;
+}
+
+/* HOW IT WORKS */
+
+.how{
+  background:#071522;
+  color:white;
+}
+
+.how .section-title h2{
+  color:white;
+}
+
+.how .section-title p{
+  color:#aebdcd;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step{
+  position:relative;
+  padding:32px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  background:rgba(255,255,255,.035);
+}
+
+.number{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:#35e0a1;
+  color:#06131f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:18px;
+  margin-bottom:23px;
+}
+
+.step h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.step p{
+  color:#adbdcd;
+  font-size:15px;
+}
+
+/* WHY */
+
+.why{
+  background:#f5f7fa;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.why-text h2{
+  color:#102b4a;
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.why-text p{
+  color:#68748a;
+  margin-bottom:20px;
+}
+
+.features{
+  display:grid;
+  gap:14px;
+}
+
+.feature{
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  border:1px solid #e5eaf0;
+}
+
+.feature-icon{
+  width:40px;
+  height:40px;
+  flex:none;
+  border-radius:11px;
+  background:#e8faf3;
+  color:#0c9568;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+}
+
+.feature h3{
+  font-size:16px;
+  color:#193451;
+  margin-bottom:3px;
+}
+
+.feature p{
+  margin:0;
+  font-size:13px;
+}
+
+/* ENQUIRY */
+
+.enquiry{
+  background:white;
+}
+
+.form-box{
+  max-width:720px;
+  margin:auto;
+  background:#f7f9fb;
+  padding:40px;
+  border-radius:22px;
+  border:1px solid #e1e7ed;
+  box-shadow:0 20px 60px rgba(20,40,70,.08);
+}
+
+.form-box h3{
+  color:#102b4a;
+  font-size:27px;
+  margin-bottom:8px;
+}
+
+.form-intro{
+  color:#6b7789;
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+label{
+  display:block;
+  color:#26344d;
+  font-weight:700;
+  font-size:14px;
+  margin:18px 0 8px;
+}
+
+input,
+select{
+  width:100%;
+  padding:15px;
+  border:1px solid #ccd5df;
+  border-radius:9px;
+  background:white;
+  font-size:15px;
+  color:#172033;
+  outline:none;
+  transition:.2s;
+}
+
+input:focus,
+select:focus{
+  border-color:#159a6d;
+  box-shadow:0 0 0 3px rgba(21,154,109,.1);
+}
+
+.consent{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:23px 0;
+  font-size:12px;
+  line-height:1.5;
+  color:#626e80;
+}
+
+.consent input{
+  width:auto;
+  margin-top:3px;
+}
+
+.submit{
+  width:100%;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+  padding:16px;
+}
+
+.disclosure{
+  margin-top:25px;
+  padding:20px;
+  background:#eef4f8;
+  border-radius:12px;
+  color:#566478;
+  font-size:12px;
+  line-height:1.7;
+}
+
+.disclosure strong{
+  color:#263b54;
+  display:block;
+  margin-bottom:5px;
+}
+
+/* FAQ */
+
+.faq{
+  background:#f5f7fa;
+}
+
+.faq-list{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  border:1px solid #e2e7ed;
+  border-radius:13px;
+  margin-bottom:12px;
+  padding:20px 22px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:800;
+  color:#193451;
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+details p{
+  color:#68748a;
+  font-size:14px;
+  padding-top:14px;
+  line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+  background:#050e19;
+  color:#aebccc;
+  padding:55px 24px 30px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-bottom:35px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo{
+  color:white;
+  font-size:22px;
+  font-weight:800;
+}
+
+.footer-logo span{
+  color:#35e0a1;
+}
+
+.footer-links{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:#cbd5df;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:#35e0a1;
+}
+
+.footer-bottom{
+  padding-top:25px;
+  font-size:12px;
+  line-height:1.7;
+  color:#7f8da0;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    padding:75px 20px 80px;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .hero h1{
+    letter-spacing:-1.5px;
+  }
+
+  .cards,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .why-text h2{
+    font-size:32px;
+  }
+
+  .trust-inner{
+    gap:18px;
+  }
+
+  section{
+    padding:70px 20px;
+  }
+}
+
+@media(max-width:520px){
+
+  .nav{
+    padding:16px 18px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-card{
+    padding:25px;
+  }
+
+  .form-box{
+    padding:25px 18px;
+  }
+
+  .footer-top{
+    flex-direction:column;
+  }
+
+  .buttons .button{
+    width:100%;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="nav">
-    <div class="logo">Finance Options <span>UK</span></div>
+
+    <div class="logo">
+      Finance Options <span>UK</span>
+    </div>
 
     <nav>
-      <a href="#options">Options</a>
+      <a href="#options">Finance Options</a>
       <a href="#how">How It Works</a>
+      <a href="#faq">FAQs</a>
       <a href="#enquiry">Enquire</a>
     </nav>
+
   </div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="hero-inner">
 
     <div>
-      <h1>Explore Your Finance Options</h1>
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        UK Finance Referral Service
+      </div>
+
+      <h1>
+        Explore your <span>finance options.</span>
+      </h1>
 
       <p>
-        Looking for finance? Options for customers with good or poor credit. Make a simple enquiry and we can introduce
-        you to a suitable finance provider or broker for further discussion.
+        Looking for finance? Finance Options UK helps you explore
+        different finance routes and make an enquiry that can be
+        referred to a suitable finance professional for further discussion.
       </p>
 
-      <a href="#enquiry" class="button">Make an Enquiry</a>
+      <div class="buttons">
+        <a href="#enquiry" class="button">
+          Explore Your Options →
+        </a>
+
+        <a href="#options" class="button secondary">
+          View Finance Options
+        </a>
+      </div>
+
     </div>
 
     <div class="hero-card">
-      <h3>Start with a simple enquiry</h3>
+
+      <div class="card-top">
+
+        <div class="card-icon">£</div>
+
+        <div class="card-label">
+          Simple enquiry
+        </div>
+
+      </div>
+
+      <h2>Start exploring today</h2>
 
       <p>
-        Tell us how you'd like to be contacted and what type of finance
-        you're interested in.
+        Tell us what type of finance you're interested in and
+        provide your preferred contact details.
       </p>
 
-      <a href="#enquiry" class="button">Get Started</a>
-    </div>
+      <ul class="quick-list">
+        <li>
+          <span class="tick">✓</span>
+          Simple online enquiry
+        </li>
 
-  </div>
-</section>
+        <li>
+          <span class="tick">✓</span>
+          Explore different finance routes
+        </li>
 
-<section id="options">
-  <div class="container">
+        <li>
+          <span class="tick">✓</span>
+          No obligation to proceed
+        </li>
+      </ul>
 
-    <div class="section-title">
-      <h2>Finance Options</h2>
-
-      <p>
-        Different types of finance may be available depending on your
-        circumstances and requirements.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Secured Finance</h3>
-        <p>
-          Explore secured borrowing options where finance may be
-          considered against an eligible property.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Debt Consolidation</h3>
-        <p>
-          Find out whether consolidating existing borrowing could be
-          an option worth discussing with a finance professional.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Bridging Finance</h3>
-        <p>
-          Enquire about short-term property finance and discuss
-          your requirements with an appropriate specialist.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>How It Works</h2>
-
-      <p>
-        Making an enquiry is simple. There is no obligation to proceed.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="number">1</div>
-        <h3>Make an enquiry</h3>
-        <p>
-          Provide your name and preferred contact details.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="number">2</div>
-        <h3>We pass on your enquiry</h3>
-        <p>
-          With your permission, your enquiry can be passed to the
-          relevant finance broker or provider.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="number">3</div>
-        <h3>Discuss your options</h3>
-        <p>
-          A finance professional can contact you to discuss whether
-          an appropriate option may be available.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="enquiry" id="enquiry">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Make an Enquiry</h2>
-
-      <p>
-        Complete the short form below and tell us how you'd like
-        to be contacted.
-      </p>
-    </div>
-
-    <div class="form-box">
-
-      <form action="https://formspree.io/f/xbgrznyr" method="POST">
-
-  <h2>Make an Enquiry</h2>
-
-  <label for="name">Your name</label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    required
-  >
-
-  <label for="contact">Phone number or email</label>
-  <input
-    type="text"
-    id="contact"
-    name="contact"
-    required
-  >
-
-  <label for="consent">
-    <input
-      type="checkbox"
-      id="consent"
-      name="consent"
-      value="Yes"
-      required
-    >
-    I agree that my details can be passed to the relevant finance broker
-    regarding my enquiry.
-  </label>
-
-  <!-- Referral identification -->
-  <input type="hidden" name="referrer_name" value="Gavin Boodhoo">
-  <input type="hidden" name="referrer_mobile" value="07468 054218">
-  <input type="hidden" name="referrer_email" value="gavs25@hotmail.com">
-
-  <input
-    type="hidden"
-    name="subject"
-    value="New Finance Referral - Gavin Boodhoo"
-  >
-
-  <button type="submit">Submit Enquiry</button>
-
-</form>
-
-      <div class="disclosure">
-
-        <strong>Important information</strong>
-
-        <p>
-          Finance Options UK is an independent referral service.
-          We are not a lender and submitting an enquiry does not
-          guarantee that finance will be available or that an
-          application will be approved.
-        </p>
-
-        <p>
-          Any finance offered will be subject to the relevant
-          provider's eligibility criteria, terms and conditions.
-        </p>
-
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<footer>
-
-  <div class="footer-inner">
-
-    <p><strong>Finance Options UK</strong></p>
-
-    <p>
-      Independent finance referral service.
-    </p>
-
-    <p>
-      Please consider carefully whether any finance is suitable
-      for your circumstances.
-    </p>
-
-    <p>
-      © 2026 Finance Options UK
-    </p>
-
-  </div>
-
-</footer>
-
-</body>
-</html>
+      <a href
