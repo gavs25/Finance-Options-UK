@@ -6,9 +6,7 @@
 
   <title>Finance Options UK | Explore Your Finance Options</title>
 
-  <meta name="description" content="Finance Options UK helps you explore a range of finance options and finance solutions available
-    in the UK. Discover flexible finance options, personal finance solutions and ways to make a finance enquiry. Our aim is to make
-    exploring your options simple, straightforward and easy to understand.">
+  <meta name="description" content="Finance Options UK helps you explore a range of finance options and finance solutions available in the UK. Discover flexible finance options, personal finance solutions and ways to make a finance enquiry. Our aim is to make exploring your options simple, straightforward and easy to understand.">
 
   <style>
     * {
@@ -433,7 +431,9 @@
 
         <h2>Make an Enquiry</h2>
 
-        <label for="name">Your name</label>
+        <label for="name">
+          Your name
+        </label>
 
         <input
           type="text"
@@ -452,6 +452,48 @@
           name="contact"
           required
         >
+
+        <!-- NEW: Finance Type -->
+
+        <label for="finance_type">
+          What type of finance are you interested in?
+        </label>
+
+        <select
+          id="finance_type"
+          name="finance_type"
+          required
+        >
+
+          <option value="">
+            Please select
+          </option>
+
+          <option value="Secured Finance">
+            Secured Finance
+          </option>
+
+          <option value="Debt Consolidation">
+            Debt Consolidation
+          </option>
+
+          <option value="Bridging Finance">
+            Bridging Finance
+          </option>
+
+          <option value="Personal Finance">
+            Personal Finance
+          </option>
+
+          <option value="Car Finance">
+            Car Finance
+          </option>
+
+          <option value="Other / Not sure">
+            Other / Not sure
+          </option>
+
+        </select>
 
         <label for="consent">
           <input
@@ -490,7 +532,10 @@
           value="New Finance Referral - Gavin Boodhoo"
         >
 
-        <button type="submit" class="button">
+        <button
+          type="submit"
+          class="button"
+        >
           Submit Enquiry
         </button>
 
