@@ -1,9 +1,24 @@
-<?xml version="1.0"
-encoding="UTF-8"?>
-<urlset
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<loc>https://gavs25.github.io/Finance-Options-UK/</loc>
+  <url>
+    <loc>https://gavs25.github.io/Finance-Options-UK/</loc>
   </url>
+
+  <url>
+    <loc>https://gavs25.github.io/Finance-Options-UK/secured-finance.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gavs25.github.io/Finance-Options-UK/debt-consolidation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gavs25.github.io/Finance-Options-UK/bridging-finance.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gavs25.github.io/Finance-Options-UK/personal-finance.html</loc>
+  </url>
+
 </urlset>
