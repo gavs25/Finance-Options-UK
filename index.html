@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Finance Options UK | Explore Your Finance Options</title>
+  <title>Finance Options UK | Explore Finance Options & Make an Enquiry</title>
 
-  <meta name="description" content="Finance Options UK helps you explore a range of finance options and finance solutions available in the UK. Discover flexible finance options, personal finance solutions and ways to make a finance enquiry. Our aim is to make exploring your options simple, straightforward and easy to understand.">
+  <meta name="description" content="Explore finance options in the UK, including secured finance, debt consolidation, bridging finance, personal finance and other borrowing options. Make a simple finance enquiry today.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09294f">
+
+  <link rel="canonical" href="https://gavs25.github.io/Finance-Options-UK/">
 
   <style>
     * {
@@ -15,11 +20,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: #172033;
       background: #f6f8fb;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     header {
@@ -56,10 +65,16 @@
       font-weight: 600;
     }
 
+    .nav a:hover {
+      color: #18a673;
+    }
+
     .hero {
-      background: linear-gradient(135deg, #09294f, #155b8f);
+      background:
+        radial-gradient(circle at 85% 20%, rgba(24,166,115,.18), transparent 30%),
+        linear-gradient(135deg, #071f3d, #155b8f);
       color: white;
-      padding: 85px 20px;
+      padding: 90px 20px;
     }
 
     .hero-inner {
@@ -72,14 +87,19 @@
     }
 
     .hero h1 {
-      font-size: 50px;
-      line-height: 1.1;
+      font-size: 52px;
+      line-height: 1.08;
       margin-bottom: 22px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: #4ee0aa;
     }
 
     .hero p {
       font-size: 19px;
-      max-width: 650px;
+      max-width: 680px;
       color: #e6eef7;
       margin-bottom: 30px;
     }
@@ -98,20 +118,26 @@
     }
 
     .button:hover {
-      opacity: 0.9;
+      opacity: .9;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.35);
+      margin-left: 8px;
     }
 
     .hero-card {
       background: white;
       color: #172033;
       padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.2);
     }
 
-    .hero-card h3 {
+    .hero-card h2 {
       margin-bottom: 15px;
-      font-size: 23px;
+      font-size: 24px;
     }
 
     .hero-card p {
@@ -120,8 +146,26 @@
       margin-bottom: 20px;
     }
 
+    .hero-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .hero-list li {
+      margin: 10px 0;
+      color: #405066;
+      font-size: 14px;
+    }
+
+    .hero-list li::before {
+      content: "✓";
+      color: #18a673;
+      font-weight: bold;
+      margin-right: 9px;
+    }
+
     section {
-      padding: 70px 20px;
+      padding: 75px 20px;
     }
 
     .container {
@@ -135,15 +179,22 @@
     }
 
     .section-title h2 {
-      font-size: 35px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 12px;
       color: #123b70;
     }
 
     .section-title p {
       color: #68748a;
-      max-width: 700px;
+      max-width: 760px;
       margin: auto;
+    }
+
+    .intro-text {
+      max-width: 900px;
+      margin: 0 auto 45px;
+      color: #536174;
+      text-align: center;
     }
 
     .cards {
@@ -157,16 +208,26 @@
       padding: 30px;
       border-radius: 14px;
       border: 1px solid #e5e9f0;
-      box-shadow: 0 8px 25px rgba(20,40,70,0.05);
+      box-shadow: 0 8px 25px rgba(20,40,70,.05);
     }
 
     .card h3 {
       color: #123b70;
       margin-bottom: 12px;
+      font-size: 21px;
     }
 
     .card p {
       color: #667085;
+      font-size: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: #12815c;
+      font-weight: 700;
+      text-decoration: none;
     }
 
     .number {
@@ -182,6 +243,67 @@
       margin-bottom: 18px;
     }
 
+    .seo-section {
+      background: #ffffff;
+    }
+
+    .seo-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .seo-content h2 {
+      color: #123b70;
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .seo-content h3 {
+      color: #123b70;
+      font-size: 22px;
+      margin: 28px 0 10px;
+    }
+
+    .seo-content p {
+      color: #536174;
+      margin-bottom: 15px;
+    }
+
+    .seo-content ul {
+      margin: 15px 0 20px 22px;
+      color: #536174;
+    }
+
+    .seo-content li {
+      margin-bottom: 8px;
+    }
+
+    .how {
+      background: #09294f;
+      color: white;
+    }
+
+    .how .section-title h2 {
+      color: white;
+    }
+
+    .how .section-title p {
+      color: #d3dfeb;
+    }
+
+    .how .card {
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.12);
+    }
+
+    .how .card h3 {
+      color: white;
+    }
+
+    .how .card p {
+      color: #c8d5e2;
+    }
+
     .enquiry {
       background: #ffffff;
     }
@@ -193,6 +315,18 @@
       padding: 35px;
       border-radius: 16px;
       border: 1px solid #e3e8ef;
+      box-shadow: 0 12px 35px rgba(20,40,70,.06);
+    }
+
+    .form-box h2 {
+      color: #123b70;
+      margin-bottom: 8px;
+    }
+
+    .form-intro {
+      color: #68748a;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
 
     label {
@@ -212,10 +346,17 @@
       background: white;
     }
 
+    input:focus,
+    select:focus {
+      outline: 2px solid #b9ead8;
+      border-color: #18a673;
+    }
+
     .consent {
       margin: 22px 0;
       font-size: 13px;
       color: #5d687a;
+      font-weight: 400;
     }
 
     .consent input {
@@ -229,13 +370,48 @@
       border-radius: 10px;
       margin-top: 30px;
       color: #536174;
+      font-size: 13px;
+    }
+
+    .disclosure strong {
+      display: block;
+      color: #26344d;
+      margin-bottom: 8px;
+    }
+
+    .faq {
+      background: #f6f8fb;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      border: 1px solid #e1e6ed;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: #123b70;
+      font-weight: 700;
+    }
+
+    details p {
+      color: #667085;
+      margin-top: 12px;
       font-size: 14px;
     }
 
     footer {
       background: #0a203b;
       color: #cbd5e1;
-      padding: 40px 20px;
+      padding: 45px 20px;
     }
 
     .footer-inner {
@@ -255,12 +431,13 @@
     }
 
     @media (max-width: 800px) {
+
       .hero-inner {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 40px;
       }
 
       .cards {
@@ -269,6 +446,11 @@
 
       .nav a {
         display: none;
+      }
+
+      .button.secondary {
+        margin-left: 0;
+        margin-top: 10px;
       }
 
       section {
@@ -282,154 +464,364 @@
 
 <header>
   <div class="nav">
-    <div class="logo">Finance Options <span>UK</span></div>
+
+    <div class="logo">
+      Finance Options <span>UK</span>
+    </div>
 
     <nav>
-      <a href="#options">Options</a>
+      <a href="#options">Finance Options</a>
       <a href="#how">How It Works</a>
+      <a href="#guide">Finance Guide</a>
+      <a href="#faq">FAQs</a>
       <a href="#enquiry">Enquire</a>
     </nav>
+
   </div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="hero-inner">
 
     <div>
-      <h1>Explore Your Finance Options</h1>
+
+      <h1>
+        Explore Your <span>Finance Options</span> in the UK
+      </h1>
 
       <p>
-        Looking for finance? Options for customers with good or poor credit.
-        Make a simple enquiry and we can introduce you to a suitable finance
-        provider or broker for further discussion.
+        Looking for finance in the UK? Explore different finance
+        options, understand the basics and make a simple enquiry
+        about the type of finance you're interested in.
       </p>
 
-      <a href="#enquiry" class="button">Make an Enquiry</a>
+      <a href="#enquiry" class="button">
+        Make a Finance Enquiry
+      </a>
+
+      <a href="#options" class="button secondary">
+        Explore Options
+      </a>
+
     </div>
 
     <div class="hero-card">
-      <h3>Start with a simple enquiry</h3>
+
+      <h2>Start exploring your options</h2>
 
       <p>
-        Tell us how you'd like to be contacted and what type of finance
-        you're interested in.
+        Different types of finance may be available depending on
+        your circumstances, requirements and the criteria of the
+        relevant finance provider.
       </p>
 
-      <a href="#enquiry" class="button">Get Started</a>
+      <ul class="hero-list">
+
+        <li>Secured finance</li>
+        <li>Debt consolidation</li>
+        <li>Bridging finance</li>
+        <li>Personal finance</li>
+        <li>Car finance</li>
+
+      </ul>
+
+      <a href="#enquiry" class="button">
+        Get Started
+      </a>
+
     </div>
 
   </div>
+
 </section>
+
+<!-- FINANCE OPTIONS -->
 
 <section id="options">
+
   <div class="container">
 
     <div class="section-title">
-      <h2>Finance Options</h2>
+
+      <h2>Finance Options in the UK</h2>
 
       <p>
-        Different types of finance may be available depending on your
-        circumstances and requirements.
+        Explore some of the finance categories people commonly
+        consider when looking for borrowing or funding.
       </p>
+
     </div>
 
     <div class="cards">
 
       <div class="card">
+
         <h3>Secured Finance</h3>
+
         <p>
-          Explore secured borrowing options where finance may be
-          considered against an eligible property.
+          Secured finance is borrowing that may be linked to an
+          eligible property or asset. It can be used for different
+          purposes depending on the lender and the applicant's circumstances.
         </p>
+
+        <a href="#enquiry">
+          Ask about secured finance →
+        </a>
+
       </div>
 
       <div class="card">
+
         <h3>Debt Consolidation</h3>
+
         <p>
-          Find out whether consolidating existing borrowing could be
-          an option worth discussing with a finance professional.
+          Debt consolidation involves combining existing borrowing
+          into another finance arrangement. Whether it is suitable
+          depends on individual circumstances and the terms available.
         </p>
+
+        <a href="#enquiry">
+          Ask about debt consolidation →
+        </a>
+
       </div>
 
       <div class="card">
+
         <h3>Bridging Finance</h3>
+
         <p>
-          Enquire about short-term property finance and discuss
-          your requirements with an appropriate specialist.
+          Bridging finance is generally short-term property finance
+          that can be used in situations where funds are needed
+          before longer-term finance becomes available.
         </p>
+
+        <a href="#enquiry">
+          Ask about bridging finance →
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Personal Finance</h3>
+
+        <p>
+          Personal finance can cover a range of borrowing needs.
+          Eligibility, rates and terms vary between providers and
+          depend on individual circumstances.
+        </p>
+
+        <a href="#enquiry">
+          Explore personal finance →
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Car Finance</h3>
+
+        <p>
+          There are different ways of financing a vehicle purchase.
+          Available options and eligibility depend on the relevant
+          finance provider and your circumstances.
+        </p>
+
+        <a href="#enquiry">
+          Ask about car finance →
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Poor Credit Finance</h3>
+
+        <p>
+          Having a poor credit history can affect the finance options
+          available to you. You can still make an enquiry and discuss
+          your circumstances, but approval cannot be guaranteed.
+        </p>
+
+        <a href="#enquiry">
+          Discuss your options →
+        </a>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<section id="how">
+<!-- SEO GUIDE -->
+
+<section class="seo-section" id="guide">
+
+  <div class="container">
+
+    <div class="seo-content">
+
+      <h2>
+        Understanding Finance Options
+      </h2>
+
+      <p>
+        Choosing finance can be difficult when there are different
+        products, providers and eligibility requirements to consider.
+        Finance Options UK is designed to make the initial process
+        easier to understand.
+      </p>
+
+      <p>
+        The type of finance that may be suitable depends on factors
+        such as the purpose of the borrowing, your circumstances,
+        affordability, credit history and the requirements of the
+        finance provider.
+      </p>
+
+      <h3>
+        What finance options are available in the UK?
+      </h3>
+
+      <p>
+        Finance options can vary widely. Depending on your circumstances,
+        you may wish to explore secured finance, debt consolidation,
+        bridging finance, personal finance, car finance or other
+        specialist finance options.
+      </p>
+
+      <h3>
+        Can I get finance with poor credit?
+      </h3>
+
+      <p>
+        A poor credit history does not necessarily mean that you
+        cannot make an enquiry. However, finance providers use their
+        own eligibility and affordability criteria, so there is no
+        guarantee that an application will be approved.
+      </p>
+
+      <h3>
+        What should I consider before applying for finance?
+      </h3>
+
+      <ul>
+        <li>Whether the finance is suitable for your circumstances.</li>
+        <li>The total cost of borrowing.</li>
+        <li>Interest rates and other charges.</li>
+        <li>The repayment period.</li>
+        <li>Whether you can comfortably afford the repayments.</li>
+        <li>The terms and conditions offered by the relevant provider.</li>
+      </ul>
+
+      <p>
+        You should carefully consider your circumstances before
+        taking out finance and seek appropriate professional advice
+        where necessary.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="how" id="how">
+
   <div class="container">
 
     <div class="section-title">
-      <h2>How It Works</h2>
+
+      <h2>How Our Finance Enquiry Works</h2>
 
       <p>
-        Making an enquiry is simple. There is no obligation to proceed.
+        Starting an enquiry is straightforward.
       </p>
+
     </div>
 
     <div class="cards">
 
       <div class="card">
+
         <div class="number">1</div>
 
         <h3>Make an enquiry</h3>
 
         <p>
-          Provide your name and preferred contact details.
+          Tell us your contact details and the type of finance
+          you're interested in.
         </p>
+
       </div>
 
       <div class="card">
+
         <div class="number">2</div>
 
-        <h3>We pass on your enquiry</h3>
+        <h3>Enquiry referral</h3>
 
         <p>
-          With your permission, your enquiry can be passed to the
-          relevant finance broker or provider.
+          With your permission, your enquiry can be passed to
+          the relevant finance broker or provider.
         </p>
+
       </div>
 
       <div class="card">
+
         <div class="number">3</div>
 
         <h3>Discuss your options</h3>
 
         <p>
-          A finance professional can contact you to discuss whether
-          an appropriate option may be available.
+          A finance professional can contact you to discuss your
+          requirements and whether an appropriate option may be available.
         </p>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
+
+<!-- ENQUIRY -->
 
 <section class="enquiry" id="enquiry">
 
   <div class="container">
 
     <div class="section-title">
-      <h2>Make an Enquiry</h2>
+
+      <h2>Make a Finance Enquiry</h2>
 
       <p>
-        Complete the short form below and tell us how you'd like
-        to be contacted.
+        Complete the short form below and tell us what type of
+        finance you're interested in.
       </p>
+
     </div>
 
     <div class="form-box">
 
       <form action="https://formspree.io/f/xbgrznyr" method="POST">
 
-        <h2>Make an Enquiry</h2>
+        <h2>Start Your Enquiry</h2>
+
+        <p class="form-intro">
+          Your enquiry does not guarantee that finance will be
+          available or that an application will be approved.
+        </p>
 
         <label for="name">
           Your name
@@ -439,6 +831,7 @@
           type="text"
           id="name"
           name="name"
+          autocomplete="name"
           required
         >
 
@@ -452,8 +845,6 @@
           name="contact"
           required
         >
-
-        <!-- NEW: Finance Type -->
 
         <label for="finance_type">
           What type of finance are you interested in?
@@ -489,13 +880,18 @@
             Car Finance
           </option>
 
+          <option value="Poor Credit Finance">
+            Poor Credit Finance
+          </option>
+
           <option value="Other / Not sure">
             Other / Not sure
           </option>
 
         </select>
 
-        <label for="consent">
+        <label class="consent">
+
           <input
             type="checkbox"
             id="consent"
@@ -505,7 +901,8 @@
           >
 
           I agree that my details can be passed to the relevant
-          finance broker regarding my enquiry.
+          finance broker or provider regarding my enquiry.
+
         </label>
 
         <input
@@ -536,7 +933,7 @@
           type="submit"
           class="button"
         >
-          Submit Enquiry
+          Submit Finance Enquiry
         </button>
 
       </form>
@@ -560,18 +957,143 @@
       </div>
 
     </div>
+
   </div>
 
 </section>
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Finance Options UK FAQs</h2>
+
+      <p>
+        Answers to some common questions about exploring finance.
+      </p>
+
+    </div>
+
+    <div class="faq-list">
+
+      <details>
+
+        <summary>
+          What finance options are available in the UK?
+        </summary>
+
+        <p>
+          Finance options can include secured finance, debt
+          consolidation, bridging finance, personal finance,
+          car finance and other specialist finance products.
+          Availability depends on your circumstances and the
+          relevant provider's criteria.
+        </p>
+
+      </details>
+
+      <details>
+
+        <summary>
+          Can I enquire about finance with poor credit?
+        </summary>
+
+        <p>
+          You can make an enquiry and explain your circumstances.
+          However, a poor credit history may affect the options
+          available and approval cannot be guaranteed.
+        </p>
+
+      </details>
+
+      <details>
+
+        <summary>
+          What is debt consolidation?
+        </summary>
+
+        <p>
+          Debt consolidation involves combining existing borrowing
+          into another finance arrangement. It may or may not be
+          suitable depending on your individual circumstances and
+          the terms available.
+        </p>
+
+      </details>
+
+      <details>
+
+        <summary>
+          What is bridging finance?
+        </summary>
+
+        <p>
+          Bridging finance is generally short-term finance,
+          commonly associated with property transactions where
+          funds may be needed before longer-term finance is available.
+        </p>
+
+      </details>
+
+      <details>
+
+        <summary>
+          Does making an enquiry guarantee finance?
+        </summary>
+
+        <p>
+          No. Making an enquiry does not guarantee approval,
+          availability, rates or any particular finance product.
+          Any decision is made by the relevant finance provider.
+        </p>
+
+      </details>
+
+      <details>
+
+        <summary>
+          Is there an obligation to take finance?
+        </summary>
+
+        <p>
+          No. Making an enquiry simply allows your requirements
+          to be discussed. You are not required to proceed with
+          any finance option offered.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
 
   <div class="footer-inner">
 
-    <p><strong>Finance Options UK</strong></p>
+    <p>
+      <strong>Finance Options UK</strong>
+    </p>
 
     <p>
       Independent finance referral service.
+    </p>
+
+    <p>
+      We are not a lender and do not make lending decisions.
+    </p>
+
+    <p>
+      Finance availability, eligibility, rates and terms may vary.
+      No guarantee of approval is given.
     </p>
 
     <p>
